@@ -2,7 +2,7 @@
 
 function getMetaTags($site_html) {
     $snc=array();
-    preg_match_all('/<meta(.*)>/',$site_html,$matches); //getting all meta tags
+    preg_match_all('/<meta(.*?)>/',$site_html,$matches); //getting all meta tags
     if (count($matches)>0) {
         foreach ($matches[1] as $a) {
             //getting open graph tags
